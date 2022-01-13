@@ -1,0 +1,84 @@
+.tilt {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  /* height: 100%; */
+  padding-top: 100%;
+
+  margin: 0 auto;
+}
+
+.tilt__back,
+.tilt__front {
+  width: 100%;
+  height: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.tilt__back {
+  position: relative;
+}
+
+.tilt__front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 1s all;
+}
+.tilt:hover {
+  transition: 0.2s all;
+}
+.tilt > * {
+  transition: 1s all;
+  /* border: 1px solid rgba(148, 237, 2, 0); */
+}
+.tilt:hover > * {
+  /* border: 1px solid rgba(148, 237, 2, 1); */
+  transition: 0.2s all;
+}
+/* ==================== */
+body {
+  background-color: #000;
+}
+.text {
+  color: white;
+  font-size: 12px;
+}
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  position: relative;
+}
+.flex > * {
+  width: 25%;
+}
+.tilt__front {
+  /* border: 1px solid #94ed02; */
+  /* transition: border 0.2s; */
+}
+.tilt:hover .tilt__front {
+  /* border: 1px solid #94ed02; */
+}
+
+.border .tilt {
+  overflow: visible;
+}
+.img-wrapper {
+  /* width: 300px; */
+  /* padding-top: 60%; */
+}
+.border .tilt > * {
+  border: 1px solid rgba(148, 237, 2, 0);
+}
+.border .tilt:hover > * {
+  border: 1px solid rgba(148, 237, 2, 1);
+}
